@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function(){
 const addButton = document.getElementById('add-task-btn');
-const inputFiend = document.getElementById('task-input');
+const taskInput = document.getElementById('task-input');
 const taskList = document.getElementById('task-list');
 
 addTask = () =>{
-    const taskText = inputFiend.value.trim();
+    const taskText = taskInput.value.trim();
     if (taskText === ""){
         alert("Please Enter a Task")
         return;
@@ -18,13 +18,13 @@ addTask = () =>{
         makeRmBtn.onclick = ()=>{ taskList.removeChild(makeListObj)};
         makeListObj.appendChild(makeRmBtn);
         taskList.appendChild(makeListObj);
-        inputFiend.value = ""
+        taskInput.value = ""
 
     }
 }
 addButton.addEventListener("click",addTask);
 
-inputFiend.addEventListener("keypress",(e)=>{
+taskInput.addEventListener("keypress",(e)=>{
     if(e.key ==="Enter"){
         return addTask()
     }
