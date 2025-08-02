@@ -13,7 +13,7 @@ addTask = () =>{
         const makeListObj = document.createElement("li");;
         makeListObj.textContent = taskText;
         const makeRmBtn = document.createElement("button");
-        makeRmBtn.className="remove-btn" ;
+        makeRmBtn.classList.add="remove-btn" ;
         makeRmBtn.textContent = "Remove";
         makeRmBtn.onclick = ()=>{ taskList.removeChild(makeListObj)};
         makeListObj.appendChild(makeRmBtn);
